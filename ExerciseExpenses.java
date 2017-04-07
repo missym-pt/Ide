@@ -1,0 +1,1 @@
+public class ExerciseExpenses {    public static void main(String[] args) {         int water = 15;        int electricity = 20;        int gaz = 13;         int sum = water + electricity + gaz;        System.out.println(sum);    }}
