@@ -28,13 +28,12 @@ public class Exercicio4 extends Exercicio{
         userCriarJava(userinput, "ExerciseLoop.java" );
         compilaErros("ExerciseLoop.java");
         
-        String user_input =  "int count = 0;\n while(i<10){\n System.out.println(i);\n} ";
-		  
+        	  
 		  String string__[] =new String[4];
 		  string__[0]="(int \\w+\\s?[=]\\s?\\d\\s?[;])";
 		  string__[1]="(while\\s?\\(\\s?\\w+\\s?[<]\\s?\\d+\\s?\\))";
-		  string__[2]="(System[.]out[.](println||print)\\(\\w+\\);)";
-                  string__[3]=""; //validação ++
+		  string__[3]="(System[.]out[.](println||print)\\(\\w+\\);)";
+                  string__[2]="(\\w+[+][+][;])";
                   
 		  int cont = 0; Pattern p; Matcher m;
 		  
@@ -42,11 +41,10 @@ public class Exercicio4 extends Exercicio{
 		  
 		  p = Pattern.compile(string__[i]);
 		  
-		  m = p.matcher(user_input);
+		  m = p.matcher(userinput);
 		  
 		  if(m.find())cont++;}
-                  System.out.println("cont "+cont);
-		  
+	  
         return cont >= 4 ? 4 : 0;
     }
     
