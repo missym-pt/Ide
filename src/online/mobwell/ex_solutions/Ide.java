@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ide;
+package online.mobwell.ex_solutions;
 
-import static ide.MockupData.*;
+import static online.mobwell.ex_solutions.MockupData.*;
 
 /**
  *
