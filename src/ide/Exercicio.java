@@ -5,6 +5,7 @@
  */
 package ide;
 
+import application.Settings;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -66,7 +67,7 @@ public abstract class Exercicio {
             String[] command = {"CMD", "/C", s};
             ProcessBuilder probuilder = new ProcessBuilder(command);
 
-            probuilder.directory(new File("C:\\Users\\MissyM\\Documents\\NetBeansProjects\\Ide"));
+            probuilder.directory(new File(Settings.PROJECT_LOCATION)); //esta
 
             Process process = probuilder.start();
             
@@ -106,11 +107,12 @@ return 0;}
     String file = "result.txt"; 
         
         try {           
-            
+            // Log4j
+            // Logger log = Logger.getLogger(se
             String[] command = {"CMD", "/C", "java "+exercise+" > result.txt 2>&1"};
             ProcessBuilder probuilder = new ProcessBuilder(command);
 
-            probuilder.directory(new File("C:\\Users\\MissyM\\Documents\\NetBeansProjects\\Ide"));
+            probuilder.directory(new File(Settings.PROJECT_LOCATION)); //esta
             
             Process process = probuilder.start();
             

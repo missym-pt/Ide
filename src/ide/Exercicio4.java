@@ -55,6 +55,7 @@ public class Exercicio4 extends Exercicio{
 
     public int x(BufferedReader bufferedReader, FileReader fileReader,String userinput) {
         String line = null;
+        
         int count=0, score=0;
         try {
              while ((line = bufferedReader.readLine()) != null) {
